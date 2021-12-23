@@ -1,0 +1,274 @@
+\def\debug{0} % [0;1] Show all boxes
+\def\black{0} % [0;1]
+
+\documentclass[a4paper]{article}
+%\documentclass{standalone}
+
+\pagestyle{empty} % Disable headers and footers
+\setlength{\parindent}{0pt} % Disable paragraph indentation
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX, Mapping=tex-text, SmallCapsFont = [Ubuntu-C.ttf]]{Ubuntu}
+\usepackage{fontawesome}
+\usepackage[
+	lmargin=0mm,
+	rmargin=0mm,
+	tmargin=0mm,
+	bmargin=0mm,
+	layout=a4paper
+	]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{
+	pdfpagemode={UseOutlines},
+	bookmarksopen=true,
+	bookmarksopenlevel=0,
+	hypertexnames=false,
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=black,
+	pdfstartview={FitV},
+	unicode,
+	breaklinks=true,
+	}
+
+\begin{document}
+
+\setlength{\fboxrule}{1.1pt}
+%\setlength{\fboxsep}{0pt}
+\centering
+
+\ \vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%HEADER
+
+\if\black1\colorbox{black}{ \fi\begin{minipage}[H]{0.75\paperwidth}
+	\centering
+	\if\black0\rule{\textwidth}{1.1pt}\\\fi
+	\if\black1\vspace{0.3cm}\fi
+	\if\black1\color{white}\fi
+	\huge THOMAS LEPOIX\\
+	\LARGE Ingénieur systèmes embarqués\\
+	\normalsize
+	\if\black1\vspace{0.3cm}\fi
+	\if\black0\rule{\textwidth}{1.1pt}\\\fi
+	\end{minipage}\if\black1} \fi
+
+\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COORDONNÉES
+
+\if\debug1\fbox{\fi\begin{minipage}[t]{0.35\paperwidth}
+	\centering
+	\fbox{\parbox[c][10pt][b]{77pt}{\centering\textbf{COORDONNÉES}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.25\paperwidth}
+		\raggedleft
+		Bordeaux\\
+		thomas.lepoix@protonmail.ch\\
+		0683604789\\
+		\href{https://github.com/thomaslepoix}{thomaslepoix}\\
+		\href{https://www.linkedin.com/in/thomas-lepoix-298758150/}{thomas-lepoix-298758150}\\
+		Permis B\\
+		1996\\
+		\end{minipage}\if\debug1} \fi
+	\hspace{0.25cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.02\paperwidth}
+		\centering
+		\faicon{map-marker}\\
+		\faicon{at}\\
+		\faicon{phone}\\
+		\href{https://github.com/thomaslepoix}{\faicon{github}}\\
+		\href{https://www.linkedin.com/in/thomas-lepoix-298758150/}{\faicon{linkedin}}\\
+		\faicon{car}\\
+		\faicon{birthday-cake}\\
+		\end{minipage}\if\debug1} \fi
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.02\paperwidth}
+		\ %alignement box
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COMPÉTENCES
+	\fbox{\parbox[c][10pt][b]{74pt}{\centering\textbf{COMPÉTENCES}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.32\paperwidth}
+		\raggedleft
+%%		Conception électronique \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+%		Électronique (BF, HF, CEM) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+%%		Hyperfréquences \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+%		Linux embarqué (Yocto) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+%		Environnement libre / GNU \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+%		Microcontrôleurs (8 bits / ARM) \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+%		Bus (UART, SPI, I2C, CAN, etc.) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+%		Réseau / infra \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+%		DevOps (CMake, Docker, Debian) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+%		C / C++ \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+%		Assembleur CISC Freescale \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+%		Python \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+%		Scripts shell \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+%		LaTex \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+%		Anglais \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+		Linux embarqué (Yocto) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		C / Modern C++ \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		Électronique (BF, HF, CEM) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		Environnement libre / GNU \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		Scripts shell \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		LaTeX \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		DevOps (CMake, Docker, Debian) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+		Bus (UART, SPI, I2C, CAN, etc.) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+		Anglais \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+		Microcontrôleurs (8 bits / ARM) \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		Assembleur CISC Freescale \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		Réseau / infra \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		VHDL / SoPC \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		Python \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		\end{minipage}\if\debug1} \fi
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.02\paperwidth}
+		\ %alignement box
+		\end{minipage}\if\debug1} \fi
+
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FORMATIONS
+	\fbox{\parbox[c][10pt][b]{67pt}{\centering\textbf{FORMATIONS}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.30\paperwidth}
+		\raggedleft
+		\centering
+		\textbf{2017 - 2019\\Master systèmes embarqués}\\
+		ESTEI / Ynov - Bordeaux\\
+		\ \\
+		\textbf{2016 - 2017\\Bachelor systèmes\\embarqués \& robotique}\\
+		ESTEI - Bordeaux\\
+		\ \\
+		\textbf{2014 - 2016\\BTS systèmes numériques\\électronique \& communication}\\
+		Lycée Jean-Baptiste de Baudre - Agen\\
+		\ \\
+		\textbf{2012 - 2014\\BAC S - SVT\\Spécialité Informatique\\\& science du numérique}\\
+		Lycée Bernard Palissy - Agen\\
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%PROFIL
+	\fbox{\parbox[c][10pt][b]{35pt}{\centering\textbf{PROFIL}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.30\paperwidth}
+		\raggedleft
+		\centering
+		\textbf{Caractère}\\
+		Déterminé, perfectionniste, observateur\\
+		\ \\
+		\textbf{Centres d'intérêt}\\
+		Musique, arts, logiciels libres, cuisine\\
+		\end{minipage}\if\debug1} \fi
+	\end{minipage}\if\debug1} \fi
+\if\debug1\fbox{\fi\begin{minipage}[t]{0.6\paperwidth}%%%%%%%%%%%EXPÉRIENCES PRO
+	\centering
+	\fbox{\parbox[c][10pt][b]{91pt}{\centering\textbf{EXPÉRIENCES PRO}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.58\paperwidth}
+		\raggedright
+		\textbf{Juin 2021 - Décembre 2021}\\
+		\hspace{1cm} \textbf{Mission - Altran pour Dassault Aviation, Bordeaux}\\
+		\hspace{1cm} Développeur (C++)\\
+		\hspace{2cm} - Réécriture en C++ \& intégration d'un algorithme Python\\
+		\hspace{2cm} - Travail sur un simulateur de prototypage\\
+		\hspace{2cm} - Travail sur gros projet (\~{}20000 fichiers sources)\\
+		\ \\
+		\textbf{Juin 2019 - Février 2020}\\
+		\hspace{1cm} \textbf{Stage \& CDI - DMIC / Ubiwan, Bordeaux}\\
+		\hspace{1cm} Développeur back-end (C++)\\
+		\hspace{2cm} - Développement d'un framework de mesure de performances\\
+		\hspace{2cm} - Étude de faisabilité d'une solution nouvelle\\
+		\hspace{2cm} - Séparation d'un programme : librairie interne / partie métier\\
+		\hspace{2cm} - Profiling (Hotspot, Valgrind, Heaptrack), débug, optimisation\\
+		\hspace{2cm} - Migration d'anciens programmes Delphi vers C++\\
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%PROJETS PERSO
+	\fbox{\parbox[c][10pt][b]{79pt}{\centering\textbf{PROJETS PERSO}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.58\paperwidth}
+		\raggedright
+		\href{https://github.com/thomaslepoix/Qucs-RFlayout}{
+		\textbf{Octobre 2018 - Présent}\\
+%		\hspace{1cm} \textbf{Contribution au logiciel libre de simulation électronique Qucs}\\
+%		\hspace{1cm} Développement d'une interface d'export de typons hyperfréquences\\
+%		\hspace{2cm} - Parser de données textes\\
+%		\hspace{2cm} - Algorithme de reconstitution géométrique du typon\\
+%		\hspace{2cm} - Export vers un logiciel de CAO (KiCad, Pcb-rnd, gEDA)\\
+%		\hspace{2cm} - Interface graphique\\
+%		\hspace{2cm} - Travail en C++ / Qt\\
+%		\hspace{2cm} - Intégration au projet Qucs (Github)\\
+%
+		\hspace{1cm} \textbf{Amélioration de l'environnement libre de production hardware RF}\\
+		\hspace{1cm} Objectif : Une alternative aux logiciels propriétaires et onéreux\\
+		\hspace{2cm} - Création du logiciel libre Qucs-RFlayout\\
+		\hspace{2cm} - Co-création du projet Open-RFlab\\
+		\hspace{2cm} - Contribution aux simulateurs électroniques Qucs et OpenEMS\\
+		\hspace{2cm} - Fédération d'une communauté\\
+		\hspace{2cm} - Travail en C++ / Qt et en anglais\\
+		\hspace{2cm} - Roadmap en collaboration avec la communauté\\
+		}
+		\ \\
+%		\textbf{Novembre 2017 - Mai 2018}\\
+%		\hspace{1cm} \textbf{Travail sur les solutions opensources en hyperfréquences}\\
+%		\hspace{2cm} - Simulation / production de filtres microstrip \& antennes patch\\
+%		\hspace{2cm} - Travail de recherche sur les antennes patch\\
+%		\hspace{2cm} - Mise au point d'une méthode de design d'antenne patch\\
+%		\hspace{2cm} - Utilisation des logiciels libres Qucs et OpenEMS\\
+%		\hspace{2cm} - Rédaction de documentation sur les logiciels\\
+%		\hspace{2cm} - Développement de scripts d'interfaçage de Qucs et KiCad\\
+%
+		\href{https://github.com/conformism/raisin}{
+		\textbf{Mai 2020 - Présent}\\
+		\hspace{1cm} \textbf{Raisin : Générateur de graphe CFG à partir de code C++}\\
+		\hspace{1cm} Initiative et co-création du projet\\
+		\hspace{2cm} - Utilisation des librairies LLVM/Clang\\
+		\hspace{2cm} - Travail au niveau du compilateur sur la syntaxe du langage C++\\
+		\hspace{2cm} - Travail en C++, OOP, design patterns, peer programming\\
+		\hspace{2cm} - Projet naissant\\
+		\hspace{2cm} - Aucun équivalent libre actuellement\\
+		}
+		\ \\
+		\href{https://github.com/conformism/cmake-utils}{
+		\textbf{Juillet 2021 - Présent}\\
+		\hspace{1cm} \textbf{Travail sur l'état de l'art des outils de developpement C++}\\
+		\hspace{2cm} - Création d'une librairie d'utilitaires CMake\\
+		\hspace{2cm} - Création d'un container de développement\\
+		\hspace{2cm} - Contribution à Metashell\\
+		\hspace{2cm} - Analyse statique, fuzzing, tests \& coverage, analyse runtime\\
+		\hspace{2cm} - Profiling, optimisations\\
+		\hspace{2cm} - Packaging, documentation, CI\\
+		}
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%PROJETS EN ÉCOLE
+	\fbox{\parbox[c][10pt][b]{94pt}{\centering\textbf{PROJETS EN ÉCOLE}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.58\paperwidth}
+		\raggedright
+		\href{https://github.com/thibaudledo/Autoscope/blob/latex/Autoscope_6.pdf}{
+		\textbf{Novembre 2018 - Juin 2019}\\
+		\hspace{1cm} \textbf{Réalisation en groupe d'un télescope robotisé imprimé en 3D}\\
+		\hspace{2cm} - Architecture système\\
+		\hspace{2cm} - Coordination de l'équipe\\
+		\hspace{2cm} - Réalisation intégrale du hardware (pluggable sur Raspberry Pi)\\
+		\hspace{2cm} - Réalisation intégrale de l'OS (Yocto)\\
+		\hspace{2cm} - Développement d'un driver GPS en C\\
+		}
+%		\ \\
+%		\textbf{Octobre 2017 - Février 2018}\\
+%		\hspace{1cm} \textbf{Réalisation en groupe d'un véhicule robot télécommandé}\\
+%		\hspace{1cm} Réalisation d'une télécommande Wifi avec Raspberry Pi\\
+%		\hspace{2cm} - Carte d'IHM pluggable sur la Raspberry Pi\\
+%		\hspace{2cm} - OS Linux sur mesure (Yocto)\\
+%		\hspace{2cm} - Intégration d'un programme développé par d'autres\\
+%		\ \\
+%		\textbf{Mars 2017 - Juin 2017}\\
+%		\hspace{1cm} \textbf{Réalisation en groupe d'un aéroglisseur télécommandé}\\
+%		\hspace{1cm} Réalisation intégrale du hardware\\
+%		\hspace{2cm} - Définition du cahier des charges\\
+%		\hspace{2cm} - Design du châssis\\
+%		\hspace{2cm} - Carte d'alimentation\\
+%		\hspace{2cm} - Carte microcontrôleur\\
+%		\hspace{2cm} - Module radio\\
+%		\hspace{2cm} - Module de programmation USB\\
+		\end{minipage}\if\debug1} \fi
+	\end{minipage}\if\debug1} \fi
+
+\end{document}

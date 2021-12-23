@@ -1,0 +1,224 @@
+\def\debug{0} % [0;1] Show all boxes
+\def\black{0} % [0;1]
+
+\documentclass[a4paper]{article}
+%\documentclass{standalone}
+
+\pagestyle{empty} % Disable headers and footers
+\setlength{\parindent}{0pt} % Disable paragraph indentation
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX, Mapping=tex-text, SmallCapsFont = [Ubuntu-C.ttf]]{Ubuntu}
+\usepackage{fontawesome}
+\usepackage[
+	lmargin=0mm,
+	rmargin=0mm,
+	tmargin=0mm,
+	bmargin=0mm,
+	layout=a4paper
+	]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{
+	pdfpagemode={UseOutlines},
+	bookmarksopen=true,
+	bookmarksopenlevel=0,
+	hypertexnames=false,
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=black,
+	pdfstartview={FitV},
+	unicode,
+	breaklinks=true,
+	}
+
+\begin{document}
+
+\setlength{\fboxrule}{1.1pt}
+%\setlength{\fboxsep}{0pt}
+\centering
+
+\ \vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%HEADER
+
+\if\black1\colorbox{black}{ \fi\begin{minipage}[H]{0.75\paperwidth}
+	\centering
+	\if\black0\rule{\textwidth}{1.1pt}\\\fi
+	\if\black1\vspace{0.3cm}\fi
+	\if\black1\color{white}\fi
+	\huge THOMAS LEPOIX\\
+	\LARGE Embedded systems engineer (FR)\\
+	\normalsize
+	\if\black1\vspace{0.3cm}\fi
+	\if\black0\rule{\textwidth}{1.1pt}\\\fi
+	\end{minipage}\if\black1} \fi
+
+\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COORDINATES
+
+\if\debug1\fbox{\fi\begin{minipage}[t]{0.35\paperwidth}
+	\centering
+	\fbox{\parbox[c][10pt][b]{77pt}{\centering\textbf{COORDINATES}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.25\paperwidth}
+		\raggedleft
+		Bordeaux, France\\
+		thomas.lepoix@protonmail.ch\\
+		0683604789\\
+		\href{https://github.com/thomaslepoix}{thomaslepoix}\\
+		\href{https://www.linkedin.com/in/thomas-lepoix-298758150/}{thomas-lepoix-298758150}\\
+		EU licence : B\\
+		1996\\
+		\end{minipage}\if\debug1} \fi
+	\hspace{0.25cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.02\paperwidth}
+		\centering
+		\faicon{map-marker}\\
+		\faicon{at}\\
+		\faicon{phone}\\
+		\href{https://github.com/thomaslepoix}{\faicon{github}}\\
+		\href{https://www.linkedin.com/in/thomas-lepoix-298758150/}{\faicon{linkedin}}\\
+		\faicon{car}\\
+		\faicon{birthday-cake}\\
+		\end{minipage}\if\debug1} \fi
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.02\paperwidth}
+		\ %alignement box
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SKILLS
+	\fbox{\parbox[c][10pt][b]{36pt}{\centering\textbf{SKILLS}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.32\paperwidth}
+		\raggedleft
+		Embedded Linux (Yocto) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		C / Modern C++ \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		Electronics (LF, HF, EMC) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		Free tooling / GNU \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		Shell scripts \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		LaTeX \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle}\\
+		DevOps (CMake, Docker, Debian) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+		Bus (UART, SPI, I2C, CAN, etc.) \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+		English \hspace{0.2cm} \faicon{circle} \faicon{circle} \faicon{circle-thin}\\
+		Microcontrollers (8 bits / ARM) \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		Assembly CISC Freescale \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		Network / infra \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		VHDL / SoPC \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		Python \hspace{0.2cm} \faicon{circle} \faicon{circle-thin} \faicon{circle-thin}\\
+		\end{minipage}\if\debug1} \fi
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.02\paperwidth}
+		\ %alignement box
+		\end{minipage}\if\debug1} \fi
+
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%DEGREES
+	\fbox{\parbox[c][10pt][b]{48pt}{\centering\textbf{DEGREES}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.30\paperwidth}
+		\raggedleft
+		\centering
+		\textbf{2017 - 2019\\Embedded systems Master}\\
+		ESTEI / Ynov - Bordeaux\\
+		\ \\
+		\textbf{2016 - 2017\\Embedded systems\\\& robotics Bachelor}\\
+		ESTEI - Bordeaux\\
+		\ \\
+		\textbf{2014 - 2016\\Digital systems\\electronics \& communication BTS}\\
+		Lycée Jean-Baptiste de Baudre - Agen\\
+		\ \\
+		\textbf{2012 - 2014\\BAC S - SVT\\Specialization Informatics\\\& digital science}\\
+		Lycée Bernard Palissy - Agen\\
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%PROFIL
+	\fbox{\parbox[c][10pt][b]{36pt}{\centering\textbf{PROFIL}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.30\paperwidth}
+		\raggedleft
+		\centering
+		\textbf{Character}\\
+		Determined, perfectionist, observer\\
+		\ \\
+		\textbf{Hobbies}\\
+		Music, arts, cooking,\\
+		free \& opensource software\\
+		\end{minipage}\if\debug1} \fi
+	\end{minipage}\if\debug1} \fi
+\if\debug1\fbox{\fi\begin{minipage}[t]{0.6\paperwidth}%%%%%%%%%%PROFESSIONAL EXP
+	\centering
+	\fbox{\parbox[c][10pt][b]{100pt}{\centering\textbf{PROFESSIONAL EXP}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.58\paperwidth}
+		\raggedright
+		\textbf{June 2021 - December 2021}\\
+		\hspace{1cm} \textbf{Mission - Altran for Dassault Aviation, Bordeaux}\\
+		\hspace{1cm} Developer (C++)\\
+		\hspace{2cm} - Work on a prototyping simulator\\
+		\hspace{2cm} - Very large project (\~{}20000 source files)\\
+		\ \\
+		\textbf{June 2019 - February 2020}\\
+		\hspace{1cm} \textbf{Internship \& contract - DMIC / Ubiwan, Bordeaux}\\
+		\hspace{1cm} Back-end developer (C++)\\
+		\hspace{2cm} - Development of a performance measurement framework\\
+		\hspace{2cm} - Feasibility study of a new solution\\
+		\hspace{2cm} - Separation of a program : internal library / business logic\\
+		\hspace{2cm} - Profiling (Hotspot, Valgrind, Heaptrack), debug, optimization\\
+		\hspace{2cm} - Migrating old Delphi programs to C ++\\
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%PERSONAL PROJECTS
+	\fbox{\parbox[c][10pt][b]{109pt}{\centering\textbf{PERSONAL PROJECTS}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.58\paperwidth}
+		\raggedright
+		\href{https://github.com/thomaslepoix/Qucs-RFlayout}{
+		\textbf{October 2018 - Present}\\
+		\hspace{1cm} \textbf{Improvement of the RF hardware free production environment}\\
+		\hspace{1cm} Objective: An alternative to proprietary and expensive software\\
+		\hspace{2cm} - Creation of the free software Qucs-RFlayout\\
+		\hspace{2cm} - Co-creation of the project Open-RFlab\\
+		\hspace{2cm} - Contribution to Qucs and OpenEMS electronic simulators\\
+		\hspace{2cm} - Community federation\\
+		\hspace{2cm} - Work in C++ / Qt and in english\\
+		\hspace{2cm} - Collaborative roadmap with the community\\
+		}
+		\ \\
+		\href{https://github.com/conformism/raisin}{
+		\textbf{May 2020 - Present}\\
+		\hspace{1cm} \textbf{Raisin : Control Flow Graph generator from C++ code}\\
+		\hspace{1cm} Initiative and project co-creation\\
+		\hspace{2cm} - Using LLVM/Clang libraries\\
+		\hspace{2cm} - Compiler-level work on C ++ language syntax\\
+		\hspace{2cm} - Work in C++, OOP, design patterns, peer programming\\
+		\hspace{2cm} - Emerging project\\
+		\hspace{2cm} - No available FOSS equivalent currently\\
+		}
+		\ \\
+		\href{https://github.com/conformism/cmake-utils}{
+		\textbf{July 2021 - Present}\\
+		\hspace{1cm} \textbf{Work on the state of the art of C ++ development tools}\\
+		\hspace{2cm} - Creation of a CMake utils library\\
+		\hspace{2cm} - Creation of a development container\\
+		\hspace{2cm} - Contribution to Metashell\\
+		\hspace{2cm} - Static analysis, fuzzing, tests \& coverage, runtime analysis\\
+		\hspace{2cm} - Profiling, optimizations\\
+		\hspace{2cm} - Packaging, documentation, CI\\
+		}
+		\end{minipage}\if\debug1} \fi
+
+	\vspace{0.5cm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SCHOOL PROJECTS
+	\fbox{\parbox[c][10pt][b]{94pt}{\centering\textbf{SCHOOL PROJECTS}}}\\
+	\vspace{0.5cm}
+	\if\debug1\fbox{\fi\begin{minipage}[H]{0.58\paperwidth}
+		\raggedright
+		\href{https://github.com/thibaudledo/Autoscope/blob/latex/Autoscope_6.pdf}{
+		\textbf{November 2018 - June 2019}\\
+		\hspace{1cm} \textbf{Team building of a 3D printed robotic telescope}\\
+		\hspace{2cm} - System architecture\\
+		\hspace{2cm} - Team coordination\\
+		\hspace{2cm} - Full hardware engineering (pluggable on Raspberry Pi)\\
+		\hspace{2cm} - Full OS engineering (Yocto)\\
+		\hspace{2cm} - Development of a GPS driver in C\\
+		}
+		\end{minipage}\if\debug1} \fi
+	\end{minipage}\if\debug1} \fi
+
+\end{document}
