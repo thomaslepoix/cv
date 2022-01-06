@@ -3,16 +3,16 @@
 ## Dependencies
 
 ```sh
-    sudo apt-get install texlive-full
+sudo apt install xelatex texlive-fonts-extra
 ```
 
 ## Build
 
 ```sh
-    xelatex cv.tex
+make
 ```
 
 ## Preview
 
-Just checkout [cv.pdf](cv.pdf)
+Just checkout [cv_fr.pdf](https://raw.githubusercontent.com/thomaslepoix/cv/master/cv_fr.pdf) or [cv_en.pdf](https://raw.githubusercontent.com/thomaslepoix/cv/master/cv_en.pdf)
 
