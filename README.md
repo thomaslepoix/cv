@@ -3,7 +3,7 @@
 ## Dependencies
 
 ```sh
-sudo apt install xelatex texlive-fonts-extra
+sudo apt install texlive-xetex texlive-fonts-extra
 ```
 
 ## Build
